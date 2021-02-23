@@ -1,6 +1,6 @@
 module.exports = {
   purge: {
-    content: ["./src/**/*.html", "./src/**/*.vue"],
+    content: ['./src/**/*.html', './src/**/*.vue'],
     options: {
       safelist: [/swiper/],
     },
@@ -8,4 +8,4 @@ module.exports = {
   theme: {},
   variants: {},
   plugins: [],
-};
+}

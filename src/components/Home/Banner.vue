@@ -8,7 +8,7 @@
         </picture>
       </swiper-slide>
     </swiper>
-    <div class="text absolute top-1/2 left-1/2 serif-text">留連時有限，繾綣意難終。</div>
+    <div class="serif-text text absolute top-1/2 left-1/2 serif-text">留連時有限，繾綣意難終。</div>
     <div class="scroll-wrap">
       <div class="scroll-indocator" />
     </div>
