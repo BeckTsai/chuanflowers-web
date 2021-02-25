@@ -7,7 +7,6 @@
 <style lang="scss">
 @import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:wght@300&family=Noto+Serif+TC:wght@600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:wght@300&family=Noto+Serif+TC:wght@300;600&display=swap');
 
 html,
 body {

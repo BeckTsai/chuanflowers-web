@@ -8,7 +8,7 @@
         </picture>
       </swiper-slide>
     </swiper>
-    <div class="serif-text text absolute top-1/2 left-1/2 serif-text">留連時有限，繾綣意難終。</div>
+    <div class="serif-text text absolute top-1/2 left-1/2 font-black">留連時有限，繾綣意難終。</div>
     <div class="scroll-wrap">
       <div class="scroll-indocator" />
     </div>
@@ -18,12 +18,12 @@
 <script>
 import { Swiper, SwiperSlide } from 'vue-awesome-swiper'
 import device from '../../mixins/device'
-import pic1 from '../../assets/Home/banner_1.png'
-import pic2 from '../../assets/Home/banner_2.png'
-import pic3 from '../../assets/Home/banner_3.png'
-import mobilePic1 from '../../assets/Home/banner_m_1.png'
-import mobilePic2 from '../../assets/Home/banner_m_2.png'
-import mobilePic3 from '../../assets/Home/banner_m_3.png'
+import pic1 from '../../assets/image/Home/banner_1.png'
+import pic2 from '../../assets/image/Home/banner_2.png'
+import pic3 from '../../assets/image/Home/banner_3.png'
+import mobilePic1 from '../../assets/image/Home/banner_m_1.png'
+import mobilePic2 from '../../assets/image/Home/banner_m_2.png'
+import mobilePic3 from '../../assets/image/Home/banner_m_3.png'
 
 export default {
   name: 'banner',
