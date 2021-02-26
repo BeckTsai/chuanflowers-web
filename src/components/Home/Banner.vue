@@ -1,10 +1,10 @@
 <template>
   <div class="relative w-full">
-    <swiper :options="swiperOption">
+    <swiper ref="bannerSwiper" class="swiper" :options="swiperOption" :style="{ height: `${height}px` }">
       <swiper-slide v-for="(img, idx) in imgList" :key="idx">
         <picture>
           <source class="w-full" :style="heightStyle" :srcset="img.mobile" media="(max-width: 1024px)" />
-          <img class="banner-img h-screen" :src="img.pc" />
+          <img class="banner-img h-full" :src="img.pc" />
         </picture>
       </swiper-slide>
     </swiper>
@@ -39,13 +39,13 @@ export default {
         allowTouchMove: false,
         loop: true,
         speed: 10000,
+        fadeEffect: {
+          crossFade: true,
+        },
         autoplay: {
           delay: 5000,
           stopOnLastSlide: false,
           disableOnInteraction: true,
-        },
-        fadeEffect: {
-          crossFade: true,
         },
       },
       imgList: [
@@ -53,7 +53,14 @@ export default {
         { pc: pic2, mobile: mobilePic2 },
         { pc: pic3, mobile: mobilePic3 },
       ],
+      height: window.innerHeight,
     }
+  },
+  mounted() {
+    this.$refs.bannerSwiper.$swiper.autoplay.stop()
+    this.$nextTick(() => {
+      this.$refs.bannerSwiper.$swiper.autoplay.start()
+    })
   },
 }
 </script>
@@ -80,6 +87,8 @@ export default {
 }
 
 .banner-img {
+  transform: scale(1);
+  transition: transform 15s linear;
   @screen md {
     width: 100%;
   }
@@ -110,6 +119,17 @@ export default {
   height: 90px;
   bottom: 0;
   text-align: center;
+}
+
+.swiper {
+  /deep/ {
+    .swiper-slide-prev,
+    .swiper-slide-active {
+      img {
+        transform: scale(1.1);
+      }
+    }
+  }
 }
 
 .scroll-indocator {
