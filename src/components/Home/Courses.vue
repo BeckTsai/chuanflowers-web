@@ -12,9 +12,9 @@
           <div class="text text-sm serif-text">檔期活動</div>
         </div>
         <div class="img-wrap">
-          <img src="@/assets/image/Courses/01.jpg" />
+          <img v-lazy="require('@/assets/image/Courses/01.jpg')" />
         </div>
-        <div class="content pt-7 xl:flex xl:flex-col justify-between items-end xl:pt-40">
+        <div class="content pt-7 xl:flex xl:flex-col justify-between items-end xl:pt-28 2xl:pt-40">
           <div class="text-xs serif-text">
             <div class="inner-title">年節花藝課程</div>
             <div class="inner-text">
@@ -68,7 +68,7 @@ export default {
 
 .schedule-contain {
   padding: 32% 18px 7%;
-  @screen 2xl {
+  @screen xl {
     padding: 10% 10% 7% 11%;
   }
 }
