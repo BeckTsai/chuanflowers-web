@@ -1,8 +1,20 @@
 <template>
   <div id="app">
     <router-view />
+    <app-footer />
   </div>
 </template>
+
+<script>
+import appFooter from './components/Footer.vue'
+
+export default {
+  name: 'App',
+  components: {
+    appFooter,
+  },
+}
+</script>
 
 <style lang="scss">
 @import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:wght@300&display=swap');

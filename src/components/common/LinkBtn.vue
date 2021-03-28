@@ -1,6 +1,6 @@
 <template>
-  <div class="link-wrapper cursor-pointer" @click="$emit('event')">
-    <div class="flex items-center">
+  <div class="link-wrapper cursor-pointer text-base md:text-lg" @click="$emit('event')">
+    <div class="flex justify-between items-center mb-2">
       <div class="text mr-7 xl:mr-14">{{ text }}</div>
       <svg
         viewBox="0 0 16 16"
@@ -53,11 +53,11 @@ export default {
 
 .text {
   width: max-content;
-  font-size: 15px;
+  min-width: 70px;
   transition: color 0.4s;
 
   @screen md {
-    font-size: 18px;
+    min-width: 83px;
   }
 }
 
