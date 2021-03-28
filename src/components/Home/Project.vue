@@ -1,11 +1,11 @@
 <template>
   <div class="project-wrap">
-    <div ref="projectTitle" :class="{ 'slide-up': projectTitleActive }">
+    <div ref="projectTitle">
       <div class="title">PROJECT</div>
       <div class="subtitle">Selected Works</div>
     </div>
-    <div class="items-wrap">
-      <div ref="project1" class="item-wrap" :class="{ 'slide-up': project1Active }">
+    <div class="items-wrap hidden md:block">
+      <div ref="project1" class="item-wrap">
         <div class="img-wrap" @click="$router.push('/project/floral_bouquet')">
           <img v-lazy="require('@/assets/image/Home/floral-bouquet.png')" alt="Floral bouquet" />
           <div class="mask" />
@@ -13,7 +13,7 @@
         <div class="item-text"><span class="serif-text">花束</span>Floral bouquet</div>
         <div class="list">01</div>
       </div>
-      <div ref="project2" class="item-wrap" :class="{ 'slide-up': project2Active }">
+      <div ref="project2" class="item-wrap">
         <div class="img-wrap" @click="$router.push('/project/wreath')">
           <img v-lazy="require('@/assets/image/Home/wreath.png')" alt="Wreath" />
           <div class="mask" />
@@ -21,7 +21,7 @@
         <div class="item-text"><span class="serif-text">花圈</span>Wreath</div>
         <div class="list">02</div>
       </div>
-      <div ref="project3" class="item-wrap" :class="{ 'slide-up': project3Active }">
+      <div ref="project3" class="item-wrap">
         <div class="img-wrap" @click="$router.push('/project/floral_box')">
           <img v-lazy="require('@/assets/image/Home/floral-box.png')" alt="Floral box" />
           <div class="mask" />
@@ -29,7 +29,7 @@
         <div class="item-text"><span class="serif-text">花禮/花盒/盆花</span>Floral box</div>
         <div class="list">03</div>
       </div>
-      <div ref="project4" class="item-wrap" :class="{ 'slide-up': project4Active }">
+      <div ref="project4" class="item-wrap">
         <div class="img-wrap" @click="$router.push('/project/bridal_bouquet')">
           <img v-lazy="require('@/assets/image/Home/bridal-bouquet.png')" alt="Bridal bouquet" />
           <div class="mask" />
@@ -37,7 +37,7 @@
         <div class="item-text"><span class="serif-text">捧花/胸花</span>Bridal bouquet</div>
         <div class="list">04</div>
       </div>
-      <div ref="project5" class="item-wrap" :class="{ 'slide-up': project5Active }">
+      <div ref="project5" class="item-wrap">
         <div class="img-wrap" @click="$router.push('/project/wedding_decor')">
           <img v-lazy="require('@/assets/image/Home/wedding-decor.png')" alt="Wedding decor" />
           <div class="mask" />
@@ -125,8 +125,11 @@ export default {
 // }
 
 .project-wrap {
-  height: 156vw;
+  height: 168vw;
   background-color: $white;
+  @screen xl {
+    height: 156vw;
+  }
 }
 
 .title {

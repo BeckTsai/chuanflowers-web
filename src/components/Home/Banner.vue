@@ -26,42 +26,40 @@ import mobilePic2 from '../../assets/image/Home/banner_m_2.png'
 import mobilePic3 from '../../assets/image/Home/banner_m_3.png'
 
 export default {
-  name: 'banner',
+  name: 'Banner',
   component: {
     Swiper,
     SwiperSlide,
   },
   mixins: [device],
-  data() {
-    return {
-      swiperOption: {
-        effect: 'fade',
-        allowTouchMove: false,
-        loop: true,
-        speed: 10000,
-        fadeEffect: {
-          crossFade: true,
-        },
-        autoplay: {
-          delay: 5000,
-          stopOnLastSlide: false,
-          disableOnInteraction: true,
+  data: () => ({
+    swiperOption: {
+      effect: 'fade',
+      allowTouchMove: false,
+      loop: true,
+      speed: 10000,
+      fadeEffect: {
+        crossFade: true,
+      },
+      autoplay: {
+        delay: 5000,
+        stopOnLastSlide: false,
+        disableOnInteraction: true,
+      },
+      on: {
+        imagesReady() {
+          this.autoplay.start()
         },
       },
-      imgList: [
-        { pc: pic1, mobile: mobilePic1 },
-        { pc: pic2, mobile: mobilePic2 },
-        { pc: pic3, mobile: mobilePic3 },
-      ],
-      height: window.innerHeight,
-    }
-  },
-  mounted() {
-    this.$refs.bannerSwiper.$swiper.autoplay.stop()
-    this.$nextTick(() => {
-      this.$refs.bannerSwiper.$swiper.autoplay.start()
-    })
-  },
+    },
+    imgList: [
+      { pc: pic1, mobile: mobilePic1 },
+      { pc: pic2, mobile: mobilePic2 },
+      { pc: pic3, mobile: mobilePic3 },
+    ],
+    height: window.innerHeight,
+  }),
+  mounted() {},
 }
 </script>
 

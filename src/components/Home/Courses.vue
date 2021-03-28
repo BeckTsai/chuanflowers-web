@@ -3,7 +3,7 @@
     <div class="schedule-contain">
       <div class="relative xl:flex">
         <div
-          class="schedule-title xl:absolute w-4/5 text-xl xl:w-full mx-auto flex justify-between xl:justify-start items-center"
+          class="schedule-title w-4/5 text-xl mx-auto flex justify-between items-center xl:justify-start xl:w-full xl:absolute"
         >
           <div class="title-field flex flex-1 xl:flex-none justify-around xl:justify-start items-center">
             <div>COURSES</div>
@@ -14,14 +14,18 @@
         <div class="img-wrap">
           <img v-lazy="require('@/assets/image/Courses/01.jpg')" />
         </div>
-        <div class="content pt-7 xl:flex xl:flex-col justify-between items-end xl:pt-28 2xl:pt-40">
+        <div class="content pt-7 justify-between items-end xl:pt-32 2xl:pt-40 xl:flex xl:flex-col">
           <div class="text-xs serif-text">
             <div class="inner-title">年節花藝課程</div>
             <div class="inner-text">
               學了花藝之後每年過年我媽都叫我要帶一盆花回家，說初一別人來家裡玩她可以拿來炫耀，很有面子，順便幫我打廣告。
             </div>
           </div>
-          <link-btn class="mt-16 mb-4" :text="'Read More'" @event="$router.push('courses')" />
+          <link-btn
+            class="mt-16 mb-4 xl:mt-12 xl:mb-0 2xl:mb-4 2xl:mt-16"
+            :text="'Read More'"
+            @event="$router.push('courses')"
+          />
         </div>
       </div>
     </div>
@@ -68,6 +72,9 @@ export default {
 
 .schedule-contain {
   padding: 32% 18px 7%;
+  @screen md {
+    padding-top: 15%;
+  }
   @screen xl {
     padding: 10% 10% 7% 11%;
   }
@@ -104,8 +111,8 @@ export default {
   width: 50%;
   height: 1px;
   background-color: $grey3;
-  @screen xl {
-    width: 74%;
+  @screen md {
+    width: 84%;
   }
 }
 
