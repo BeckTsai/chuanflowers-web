@@ -112,8 +112,11 @@ export default {
   letter-spacing: 13px;
   @screen xl {
     @apply p-0;
-    font-size: 25px;
+    font-size: 18px;
     letter-spacing: 13px;
+  }
+  @screen 2xl {
+    font-size: 25px;
   }
 
   div:first-child {

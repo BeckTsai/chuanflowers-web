@@ -1,17 +1,23 @@
 <template>
   <div id="app">
+    <app-header />
     <router-view />
     <app-footer />
+    <loading />
   </div>
 </template>
 
 <script>
+import appHeader from './components/Header.vue'
 import appFooter from './components/Footer.vue'
+import Loading from './components/common/Loading.vue'
 
 export default {
   name: 'App',
   components: {
+    appHeader,
     appFooter,
+    Loading,
   },
 }
 </script>

@@ -22,7 +22,7 @@
         </div>
         <div class="text-base mr-20">
           <div class="title text-lg mb-5 xl:text-xl">FOLLOW US</div>
-          <div class="">
+          <div>
             <link-btn
               class="link mb-5 xl:text-xs 2xl:text-base"
               :text="'Facebook'"

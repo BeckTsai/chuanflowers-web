@@ -4,10 +4,11 @@ import VueLazyload from 'vue-lazyload'
 import App from './App.vue'
 import router from './router'
 import store from './store'
+
 import 'normalize.css/normalize.css'
 import 'swiper/css/swiper.min.css'
 import './assets/tailwind.css'
-import loading from './assets/loading.svg'
+import loading from './assets/loading.svg' // Import css here if you haven't elsewhere
 
 Vue.config.productionTip = false
 Vue.use(VueAwesomeSwiper)
